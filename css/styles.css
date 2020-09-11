@@ -4,14 +4,16 @@ body{
 	font-family: 'Ubuntu', sans-serif;
 }
 
+
+
 h2, h4, h5, h6{
 	color: #633368;
 }
 
-.concept{
+.newConcepto h3{
 	color: #fff;
 	padding: 5px;
-	font-size: 3.5em;
+	font-size: 3rem;
 	text-shadow: -1px 0 #633368, 0 0.5px #633368, 0.5px 0 #633368, 0 -1px #633368;
 }
 
@@ -34,17 +36,16 @@ h5 a:hover{
 	background-size: cover;
 }
 
-.icon{
-	font-size: 72px;
-	color: white;
-}
-
-.icon:hover{
-	transform: scale(1.3);
-	transition-duration: 200ms;
+.logo{
+	height: 28vh;
+    width: auto;
 }
 
 .menu-text{
+	font-size: 1em;
+}
+
+.parrafo{
 	font-size: 1em;
 }
 
@@ -68,37 +69,62 @@ textarea{
 	color: white;
 }
 
+a i{
+	font-size: 2em;
+}
+
 /*XS*/
 @media (max-width:767px)
 {
-	.concept{
-		font-size: 3.5em;
+	.encabezado{
+		height: 100vh;
+	}
+
+	.parrafo{
+		font-size: 2em;
+	}
+
+	.logo{
+	height: 40vh;
+    width: auto;
 	}
 
 	.menu-text{
-		font-size: 3em;
+		font-size: 2.5em;
 		text-align: center;
+	}
+
+	a i{
+		font-size: 4em;
 	}
 }
 
 /*SM*/
 @media (min-width:768px) and (max-width:991px)
 {
-	.concept{
-		font-size: 2.5em;
+	.newConcepto h3{
+		font-size: 3rem;
 	}
 
 	.menu-text{
-		font-size: 2em;
+		font-size: 2.5em;
 		text-align: center;
+	}
+
+	.parrafo{
+		font-size: 1.5em;
+	}
+
+	a i{
+		font-size: 4em;
 	}
 }
 
 /*MD*/
 @media (min-width:992px) and (max-width:1199px)
 {
-	.concept{
-		font-size: 2em;
+	.newConcepto h3{
+		font-size: 2rem;
 	}
 
 	.menu-text{
@@ -110,8 +136,8 @@ textarea{
 /*LG*/
 @media (min-width:1200px)
 {
-	.concept{
-		font-size: 1.5em;
+	.newConcepto h3{
+		font-size: 1.5rem;
 	}
 
 	.menu-text{
