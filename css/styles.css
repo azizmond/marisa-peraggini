@@ -4,8 +4,6 @@ body{
 	font-family: 'Ubuntu', sans-serif;
 }
 
-
-
 h2, h4, h5, h6{
 	color: #633368;
 }
@@ -71,6 +69,29 @@ textarea{
 
 a i{
 	font-size: 2em;
+}
+
+.prop {
+	/*background: rgba(99, 51, 104, .9);
+	border: 3px solid #008296;
+	border-radius: 20px;*/
+	height: 100%;
+}
+
+.prop form {
+	background: rgba(209, 209, 209, 1);
+	padding: 5px;
+	border-radius: 8px;
+}
+
+.card-paragraph {
+	font-size: .7em;
+}
+
+.color-bed {
+	color: #633368;
+	font-size: .8em;
+	padding: 0 0 0 20px;
 }
 
 /*XS*/
