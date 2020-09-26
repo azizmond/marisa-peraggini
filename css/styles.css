@@ -118,6 +118,14 @@ a i{
 	a i{
 		font-size: 4em;
 	}
+
+	.card-paragraph {
+	font-size: 1.4em;
+	}
+
+	.card-title {
+		font-size: 1.8em;
+	}
 }
 
 /*SM*/
@@ -138,6 +146,14 @@ a i{
 
 	a i{
 		font-size: 4em;
+	}
+
+	.card-paragraph {
+	font-size: 1.4em;
+	}
+
+	.card-title {
+		font-size: 1.8em;
 	}
 }
 
