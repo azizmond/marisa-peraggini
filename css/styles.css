@@ -72,9 +72,6 @@ a i{
 }
 
 .prop {
-	/*background: rgba(99, 51, 104, .9);
-	border: 3px solid #008296;
-	border-radius: 20px;*/
 	height: 100%;
 }
 
@@ -92,6 +89,11 @@ a i{
 	color: #633368;
 	font-size: .8em;
 	padding: 0 0 0 20px;
+}
+
+.status {
+	color: #633368;
+	font-size: .9em;
 }
 
 /*XS*/
