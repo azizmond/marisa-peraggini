@@ -55,280 +55,44 @@
             </ul>
         </div>
     </nav>
-    <h2 class="text-center mt-5">Propiedades</h2>
-        <div id="results" class="container prop mt-3">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-12 mt-3">
-                    <form method="post" action="#">
-                        <div class="form-group">
-                            <select id="status" name="status" class="form-control">
-                                <option value="oferta">Oferta</option>
-                                <option value="venta">Venta</option>
-                                <option value="alquiler">Alquiler</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select id="location" name="location" class="form-control">
-                                <option value="ubicacion">Ubicación</option>
-                                <option value="location-1">Buenos Aires</option>
-                                <option value="location-2">Ramos Mejía</option>
-                                <option value="location-3">Villa Ventana</option>
-                                <option value="location-4">Ciudadela</option>
-                                <option value="location-5">Morón</option>
-                                <option value="location-6">Castelar</option>
-                                <option value="location-7">San Justo</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select id="propertyType" name="property-type" class="form-control">
-                                <option value="tipo">Tipo de Propiedad</option>
-                                <option value="casa">Casa</option>
-                                <option value="departamento">Departamento</option>
-                                <option value="duplex">Duplex</option>
-                                <option value="triplex">Triplex</option>
-                                <option value="piso">Piso</option>
-                                <option value="semipiso">Semipiso</option>
-                                <option value="local">Local</option>
-                                <option value="galpon">Galpón</option>
-                                <option value="quinta">Quinta</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select id="bedQuant" name="rooms" class="form-control">
-                                <option value="dormitorios">Dormitorios</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select id="bathQuant" name="bath" class="form-control">
-                                <option value="banios">Baños</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                        <button id="searchBtn" class="btn btn-outline-primary btn-block">Enviar</button>
-                    </form>
+    
+    <div class="container mt-2">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="form-group mt-1">
+                <!-- Cambie el input por un select, ya que como son solo dos valores, podemos evitar de esta forma errores de tipeo. -->
+                    <select class="form-control mt-1" id="status" aria-label="Default select example">
+                        <option selected>Seleccione la operación</option>
+                        <option value="Venta">Venta</option>
+                        <option value="Alquiler">Alquiler</option>
+                    </select>
                 </div>
-            <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/sea-horse.jpg" width="100%" height="167px"
-                            alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Avellaneda 678 - <span class="location">Ramos Mejía</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 2</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 3</span> <hr>
-                            <span class="propType">Semipiso</span><p class="card-paragraph description">Exclusivo departamento de 3 ambientes con balcón al frente en planta baja de 100m2
-                                - Doble cochera u opcional cochera/baulera - Diseño minimalista y gran funcionalidad</p>
-                            <h4>U$S 320.000</h4>
-                        </div>
-                    </div>
+                <div class="form-group mt-1">
+                    <select class="form-control mt-1" id="location" aria-label="Default select example">
+                        <option selected>Seleccione una ubicación</option>
+                        <option value="Ramos Mejía">Ramos Mejía</option>
+                        <option value="Morón">Morón</option>
+                        <option value="San Justo">San Justo</option>
+                        <option value="Villa Ventana">Villa Ventana</option>
+                        <option value="Castelar">Castelar</option>
+                        <option value="Ciudadela">Ciudadela</option>
+                    </select>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/P3290001-300x167.jpg" height="167px" alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Chubut 400 - <span class="location">Ramos Mejía</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 4</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 2</span> <hr>
-                            <span class="propType">Casa</span><p class="card-paragraph description">5 metros de ancho por 30 mts de fondo , con las comodidades de un lote propio, 4 dormitorios, excelente diseño</p>
-                            <h4>U$S 245.000</h4>
-                        </div>
-                    </div>
+                <div class="form-group mt-1">
+                    <input id="beds" type="number" placeholder="Cant. habitaciones" class="form-control" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/IMG_20171125_131048623_HDR-300x167.jpg"
-                            width="100%" height="167px" alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Villegas 2706 – <span class="location">San Justo</span></h6>
-                            <span class="status">Alquiler</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 1</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 1</span> <hr>
-                            <span class="propType">Departamento</span><p class="card-paragraph description">Hermoso departamento de 2 amb. luminoso con vista abierta, living comedor, cocina,
-                                baño completo con bañera, dormitorio con placard.</p>
-                            <h4>$ 15.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/P1010964-300x167.jpg" width="100%"
-                            height="167px" alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Castelli 600 - <span class="location">Ramos Mejía</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 2</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 1</span> <hr>
-                            <span class="propType">Casa</span><p class="card-paragraph description">Tipo Chalet en 2 plantas, en excelente
-                                estado. Aire acondicionado, Alarma, Parrilla, Servicios</p>
-                            <h4>U$S 295.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/P8020004-300x167.jpg" width="100%" height="167px"
-                            alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Pola 1200 - <span class="location">Morón</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 3</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 1</span> <hr>
-                            <span class="propType">Casa</span><p class="card-paragraph description">Hermosa casa desarrollada sobre lote propio de 10x25. PB: Living en desnivel con hogar, Comedor, Cocina-Comedor diario con muebles bajomesada</p>
-                            <h4>U$S 255.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/DSC_0155-300x167.jpg" width="100%" height="167px"
-                            alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Paloma 0 - <span class="location">Villa Ventana</span></h6>
-                            <span class="status">Alquiler</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 5</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 5</span> <hr>
-                            <span class="propType">Quinta</span><p class="card-paragraph description">Complejo de cabañas equipadas. Casa principal de 4 amb. Quincho 40 m2 cocina, baño y parrilla. Piscina de 5x8 m.</p>
-                            <h4>Precio a consultar</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/1563595105-300x167.jpg" width="100%" height="167px"
-                            alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Tucuman 2200 - <span class="location">Castelar</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 2</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 1</span> <hr>
-                            <span class="propType">Casa</span><p class="card-paragraph description">2 dormitorios y posibilidad de 3º dormitorio y ampliar en planta alta. Muy buen estado. Garage pasante y jardín. Parrilla.</p>
-                            <h4>U$S 190.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/IMG_20170211_122011927_HDR-300x167.jpg" width="100%" height="167px" alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Espora 100 – <span class="location">Ramos Mejía</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 2</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 1</span> <hr>
-                            <span class="propType">Departamento</span><p class="card-paragraph description">Departamento 3 ambientes con lavadero y Balcón al frente – Venta Condicionada – APTO CRÉDITO. Calefacción, dos dormitorios.</p>
-                            <h4>U$S 138.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/maestraLascano300.jpg" width="100%" height="167px" alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Maestra Lascano 300 - <span class="location">Ramos Mejía</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 1</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 1</span> <hr>
-                            <span class="propType">Departamento</span><p class="card-paragraph description">Hermoso departamento de 2 ambienters con doble balcón al frente y lateral. Cochera cubierta.</p>
-                            <h4>U$S 138.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/espora44.jpg" width="100%" height="167px"
-                            alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Espora 44 - <span class="location">Ramos Mejía</span></h6>
-                            <span class="status">Alquiler</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 3</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 1</span> <hr>
-                            <span class="propType">Departamento</span><p class="card-paragraph description">Cómodo departamento al frente de 4 ambientes. Dormitorio principal en suite. Baño con hidromasajes. Escritorio.</p>
-                            <h4>$ 17.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/cabral400.jpg" width="100%" height="167px"
-                            alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Sgto Cabral 400 - <span class="location">Ramos Mejía</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 3</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 3</span> <hr>
-                            <span class="propType">Casa</span><p class="card-paragraph description">Excelente casa. Ideal destino vivienda o comercial. Local 25 m2 con baño. Entrada de auto. 3 dormitorios, uno en planta baja. Escritorio. Patio y terraza.</p>
-                            <h4>U$S 345.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/saavedra3970_ciudadela.jpg" width="100%" height="167px"
-                            alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Saavedra 3970 - <span class="location">Ciudadela</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 1</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 1</span> <hr>
-                            <span class="propType">Departamento</span><p class="card-paragraph description">Departamento al contrafrente de 2 ambientes a 3 cuadras de la estación de Ciudadela Norte. Edificio con ascensor.</p>
-                            <h4>U$S 49.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/alvarado29.jpg" width="100%" height="167px"
-                            alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Alvarado 29 - <span class="location">Ramos Mejía</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 3</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 2</span> <hr>
-                            <span class="propType">Casa</span><p class="card-paragraph description">Amplia y cómoda casa de 4 ambientes. Living comedor con hogar. Comedor, cocina garage baño. Dependencia con baño. 3 dormitorios.</p>
-                            <h4>U$S 190.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/rosales4300Ciudadela.jpg" width="100%"
-                            height="167px" alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Rosales 4300 - <span class="location">Ciudadela</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 2</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 1</span> <hr>
-                            <span class="propType">Galpón</span><p class="card-paragraph description">Amplio galpón. PB. Local al frente con cortina metálica y puerta de acceso lateral independiente con pequeña. 2 oficinas, baño. Patio. Pileta de lavado en el bajo escalera. PA. Amplio ambiente entero, balcón al frente y terraza.</p>
-                            <h4>U$S 140.000</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3">
-                    <div class="card text-center">
-                        <img class="card img-top p-2 imageProperty" src="img/propiedades/1695054611.jpg" width="100%"
-                            height="167px" alt="">
-                        <div class="card-body bckgr-card">
-                            <h6 class="card-title address">Alberdi 128 - <span class="location">Ramos Mejía</span></h6>
-                            <span class="status">Venta</span>
-                            <span class="color-bed bedQuant"><i class="fas fa-bed"></i> 3</span>
-                            <span class="color-bed bathQuant"><i class="fas fa-bath"></i> 2</span> <hr>
-                            <span class="propType">Piso</span><p class="card-paragraph description">Excelente piso de categoría en el centro de Ramos Mejía. Dormitorio principal en suite con vestidor y dos dormitorios. Balcón al frente. 2 cocheras y 2 bauleras. Edificio con SUM, parrilla y barra, piscina y gym.</p>
-                            <h4>U$S 640.000</h4>
-                        </div>
-                    </div>
-                </div>
+                <button onclick="search()" class="btn btn-outline-primary btn-block mt-1">
+                    Buscar
+                </button>
             </div>
         </div>
+    </div>
     
+    <div id="results" class="container prop mt-3">
+        <div class="row" id="rowResult"></div>
+    </div>
+    <script src="js/search.js"></script>
+
     <footer class="container-fluid mt-5 footer">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-3 col-12 text-center">
@@ -348,7 +112,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/searchForm.js"></script>
+    <script src="js/search.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
