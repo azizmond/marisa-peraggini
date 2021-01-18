@@ -174,7 +174,7 @@ const search = () => {
     const propsFounded = properties
         .filter(prop => prop.status === operation) // Filtra por la operacion y retorna un nuevo array
         .filter(prop => prop.location === location) // A ese nuevo array lo vuelve a filtrar por la ubicacion y retorna otro array
-        .filter(prop => prop.bedQuant === Number(beds)) // vuelve a filtrar el array por dormitorios y devuelve un array con las coincidencias
+        .filter(prop => prop.bedQuant === Number(beds))// vuelve a filtrar el array por dormitorios y devuelve un array con las coincidencias
 
     //Borro el row actual
     // Esto es para mostrar los resultados de ese array
