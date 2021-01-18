@@ -166,6 +166,36 @@ const properties = [
     },
 ];
 
+
+const search = () => {
+    const operation = document.getElementById('status').value;
+    const location = document.getElementById('location').value;
+    const beds = document.getElementById('beds').value;
+    let propsFounded = []
+
+    console.log(typeof operation, typeof location, typeof beds);
+
+
+    /* Operation */
+    if (operation !== '0')
+        propsFounded = properties.filter(prop => prop.status === operation) // Filtra por la operacion y retorna un nuevo array
+    else
+        propsFounded = properties
+
+    /* location */
+    if (location !== '0' && !propsFounded.length)
+        propsFounded = properties.filter(prop => prop.location === location) // A ese nuevo array lo vuelve a filtrar por la ubicacion y retorna otro array
+    else if (location !== '0' && propsFounded.length)
+        propsFounded = propsFounded.filter(prop => prop.location === location) // A ese nuevo array lo vuelve a filtrar por la ubicacion y retorna otro array
+
+    /* beds */
+    if (beds !== '' && !propsFounded.length)
+        propsFounded = properties.filter(prop => prop.bedQuant === Number(beds)) // vuelve a filtrar el array por dormitorios y devuelve un array con las coincidencias
+    else if (beds !== '' && propsFounded.length)
+        propsFounded = propsFounded.filter(prop => prop.bedQuant === Number(beds)) // vuelve a filtrar el array por dormitorios y devuelve un array
+
+console.log(operation, location, beds)
+/*
 const search = () => {
     const operation = document.getElementById('status').value;
     const location = document.getElementById('location').value;
@@ -175,7 +205,7 @@ const search = () => {
         .filter(prop => prop.status === operation) // Filtra por la operacion y retorna un nuevo array
         .filter(prop => prop.location === location) // A ese nuevo array lo vuelve a filtrar por la ubicacion y retorna otro array
         .filter(prop => prop.bedQuant === Number(beds))// vuelve a filtrar el array por dormitorios y devuelve un array con las coincidencias
-
+*/
     //Borro el row actual
     // Esto es para mostrar los resultados de ese array
     /* const row = document.createElement('div');
